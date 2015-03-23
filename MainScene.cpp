@@ -210,7 +210,7 @@ void MainScene::updateCustom(float dt)
 	int farLevel = m_gmap->getLevel(m_posX+2);
 	int subLevel = nextLevel - nowLevel;
 	int subFarLevel = farLevel - nowLevel;
-	//全自动
+	#pragma region 全自动
 	if(m_autojump)
 	{
 		//前方有地上陷阱、有Drop则远跳
@@ -234,6 +234,7 @@ void MainScene::updateCustom(float dt)
 		m_posX++;
 		return ;
 	}
+	#pragma endregion
 	auto funcCheckFlyTrap = [&]()-> bool{
 
 		if(m_gmap->isTrap(m_posX) && m_gmap->isFlyTrap(m_posX) && tjump)
