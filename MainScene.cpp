@@ -242,6 +242,7 @@ void MainScene::updateCustom(float dt)
 		return false;
 	};
 
+
 	if(tjump){
 		//NONE¡¢down+jump  Ô¶Ìø||Ô¶ÏÂÌø
 		if(subLevel <= 0 && farLevel<=nowLevel)
